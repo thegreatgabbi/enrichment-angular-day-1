@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-.address {
-    border: 1px solid black;
+.address .card-body {
+    position: relative;
+}
+
+.address .icon {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
 }

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AddressModel } from './model';
-import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +12,12 @@ export class AppComponent {
     {
       name: "Fred Flintstone",
       phone: "555-12345",
-      email: "fred@gmailcom"
+      email: "fred@gmail.com"
     },
     {
-      name: "Barney rubble",
+      name: "Barney Rubble",
       phone: "555-67890",
-      email: "barney@gmailcom"
+      email: "barney@gmail.com"
     },
   ]
 
@@ -28,5 +27,9 @@ export class AppComponent {
     console.log("received", form);
     this.addresses.push(form.value);
     console.log(this.addresses);
+  }
+
+  removeAddress(event: number) {
+    this.addresses.splice(event, 1);
   }
 }
