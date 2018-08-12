@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Output, ViewChild } from '@angular/core';
 import { AddressModel } from '../model';
 import { NgForm } from '@angular/forms';
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { EventEmitter } from '@angular/core';
+import {MaterialModule} from '../material-module/material-module.module';
 
 @Component({
   selector: 'app-address',
@@ -10,8 +10,6 @@ import { EventEmitter } from '@angular/core';
   styleUrls: ['./address.component.css']
 })
 export class AddressComponent implements OnInit {
-  faTrashAlt = faTrashAlt;
-
   @Input() address: AddressModel;
   @Input() index: number;
 

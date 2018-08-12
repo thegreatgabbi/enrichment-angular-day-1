@@ -1,10 +1,8 @@
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <app-form (outForm)="submitForm($event)"></app-form>
-        <app-address *ngFor="let a of addresses; let i = index"
-        [address]="a"
-        [index]="i"
-        (removed)="removeAddress($event)">
-        </app-address>
-    </div>
-</div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Address Book</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<app-form (outForm)="submitForm($event)"></app-form>
+<app-address *ngFor="let a of addresses; let i = index" [address]="a" [index]="i" (removed)="removeAddress($event)">
+</app-address>
